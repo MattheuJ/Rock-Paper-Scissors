@@ -9,13 +9,13 @@ computerPoints = 0
 isTwo = False
 
 while isTwo == False:
-    playerChoice = str.capitalize(input("Rock, paper, scissors... SHOOT! "))
+    playerChoice = str.capitalize(input("Rock, paper, scissors... SHOOT! ")).replace(" ","")
     computerChoice = possibleChoices[random.randint(0,2)]
 
     print(f"The computer picks {computerChoice}")
 
     if playerChoice != possibleChoices[0] and playerChoice != possibleChoices[1] and playerChoice != possibleChoices[2]:
-       print("Please enter rock, paper, or scissors. (Check your spelling and no spaces.)")
+       print("Please enter rock, paper, or scissors. (Check your spelling.)")
     elif computerChoice == "Rock" and playerChoice == "Rock":
          print("Draw! No one gets a point.")
     elif computerChoice == "Rock" and playerChoice == "Paper":
